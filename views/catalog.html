@@ -12,7 +12,7 @@
 <div>
   <div class="item" ng-repeat="item in catalog | orderBy:predicate">
     <h3>{{item.name}}</h3>
-    <img ng-src="/images/{{item.name}}.jpg" alt="{{item.name}}">
+    <img ng-src="images/{{item.name}}.jpg" alt="{{item.name}}">
     <p>Rating: {{item.rating}}/5</p>
     <p>Price: {{item.price | currency}} [<a href ng-click="addToCart(item)">buy</a>]</p>
   </div>
