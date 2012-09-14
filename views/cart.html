@@ -13,7 +13,7 @@
       </tr>
       <tr ng-repeat="item in cart">
         <td>{{item.product.name}}</td>
-        <td><input ng-model="item.quantity"></input></td>
+        <td><input type="number" min="1" ng-model="item.quantity"></input></td>
         <td>{{item.product.price | currency}}</td>
         <td>{{item.product.price * item.quantity | currency}}</td>
         <td><a href ng-click="removeFromCart(item)">remove</a></td>
