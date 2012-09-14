@@ -1,0 +1,23 @@
+<h2>Checkout</h2>
+
+<table>
+  <tr>
+    <th>Item</th>
+    <th>Quantity</th>
+    <th>Price</th>
+    <th>Total</th>
+  </tr>
+  <tr ng-repeat="item in cart">
+    <td>{{item.product.name}}</td>
+    <td>{{item.quantity}}</td>
+    <td>{{item.product.price | currency}}</td>
+    <td>{{item.product.price * item.quantity | currency}}</td>
+  </tr>
+</table>
+<p>Total: {{getTotal() | currency}}</p>
+<p>Shipping: {{shipping | currency}}</p>
+<p>Tax: {{getTax(getTotal() + shipping) | currency}}</p>
+<p>Final: {{getTax(getTotal() + shipping) + getTotal() + shipping | currency}}</p>
+
+
+<a href="/#/order">Looks good! Place my order.</a>

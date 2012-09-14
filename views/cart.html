@@ -1,0 +1,27 @@
+<h2>Cart</h2>
+<div ng-switch on="cart.length">
+  <div ng-switch-when="0">
+    Your cart is empty! Go buy something.
+  </div>
+  <div ng-switch-default>
+    <table>
+      <tr>
+        <th>Item</th>
+        <th>Quantity</th>
+        <th>Price</th>
+        <th>Total</th>
+      </tr>
+      <tr ng-repeat="item in cart">
+        <td>{{item.product.name}}</td>
+        <td><input ng-model="item.quantity"></input></td>
+        <td>{{item.product.price | currency}}</td>
+        <td>{{item.product.price * item.quantity | currency}}</td>
+        <td><a href ng-click="removeFromCart(item)">remove</a></td>
+      </tr>
+    </table>
+
+    <p>Total: {{getTotal() | currency}}</p>
+
+    <a href="/#/checkout">Checkout</a>
+  </div>
+</div>

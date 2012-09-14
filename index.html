@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <title>Angular Shopping</title>
+    <meta name="description" content=""/>
+    <meta name="viewport" content="width=device-width"/>
+    <link rel="stylesheet" href="main.css"/>
+  </head>
+  <body ng-app="shoppingApp">
+    <h1>Angular Shopping</h1>
+    <div ng-controller="MainCtrl">
+        <nav>
+            <a href="/#/">Home</a> |
+            {{getCartCount()}} items in your <a href="/#/cart">cart</a> |
+            <a href="/#/checkout">Checkout</a>
+        </nav>
+        <div class="container" ng-view></div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular.js"></script>
+
+    <script src="shopping.js"></script>
+    <script src="controllers/checkout.js"></script>
+    <script src="controllers/main.js"></script>
+    <script src="controllers/order.js"></script>
+  </body>
+</html>

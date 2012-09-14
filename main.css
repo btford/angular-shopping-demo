@@ -1,0 +1,28 @@
+/* Will be compiled down to a single stylesheet with your sass files */
+
+
+body {
+  font: 14px Helvetica Neue;
+  text-rendering: optimizeLegibility;
+  margin-top: 1em;
+  overflow-y: scroll;
+  color: #333;
+}
+
+.item {
+  float: left;
+  width: 200px;
+  background: #ddd;
+  border-left: solid 2px #333;
+  margin: 5px;
+  padding: 5px;
+}
+
+a {
+  color: steelblue;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
